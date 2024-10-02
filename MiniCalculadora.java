@@ -14,10 +14,10 @@ public class MiniCalculadora {
 
     // Pedimos los datos de entrada por teclado al usuario
 
-    System.out.println("Pasame el primer número: ");
+    System.out.println("Escribe el primer número: ");
     primer_número = datos.nextFloat();
 
-    System.out.println("Pasame el segundo número: ");
+    System.out.println("Escribe el segundo número: ");
     segundo_número = datos.nextFloat();
 
     System.out.println("Elige alguna de estas tres opreraciones: SUMA, RESTA, MULTIPLICACIÓN o DIVISIÓN: ");
