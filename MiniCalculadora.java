@@ -25,21 +25,21 @@ public class MiniCalculadora {
     
     // Comparamos las cuatro operaciones posibles con los datos pasados por teclado, añadimos una excepción si no coinciden
 
-    if (operación.equals("SUMA")) {
+    if (operación.equals("SUMA"))
         System.out.println("El resultado de la suma es: " + (primer_número + segundo_número));
     
-    }  else if (operación.equals("RESTA")) {
+    else if (operación.equals("RESTA"))
         System.out.println("El resultado de la resta es: " + (primer_número - segundo_número));
     
-    } else if (operación.equals("MULTIPLICACIÓN")) {
+    else if (operación.equals("MULTIPLICACIÓN"))
         System.out.println("El resultado de la multiplicación es: " + (primer_número * segundo_número));
     
-    } else if (operación.equals("DIVISIÓN")) {
+    else if (operación.equals("DIVISIÓN"))
         System.out.println("El resultado de la división es: " + (primer_número / segundo_número));
 
-    } else {
+    else
         System.out.println("Escribe bien la operación en la consola!!!");
-    }
+    
     datos.close();
   }
 }

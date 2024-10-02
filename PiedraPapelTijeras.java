@@ -20,17 +20,18 @@ public class PiedraPapelTijeras {
         
         // Creamos las condiciones y mostramos el resultado por pantalla
 
-        if (jugador1.equals(jugador2)) {
+        if (jugador1.equals(jugador2))
             System.out.println("Empate!");
 
-        } else if (jugador1.equals("Piedra") && jugador2.equals("Tijera")) {
+        else if (jugador1.equals("Piedra") && jugador2.equals("Tijera"))
             System.out.println("Jugador 1 gana");
 
-        } else if (jugador1.equals("Papel") && jugador2.equals("Piedra")){
+        else if (jugador1.equals("Papel") && jugador2.equals("Piedra"))
             System.out.println("Jugador 1 gana!");
-        } else {
+            
+        else
             System.out.println("Jugador 2 gana!");
-        }
+        
         recopilador.close();
     }
 }
