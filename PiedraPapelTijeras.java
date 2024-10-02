@@ -5,8 +5,7 @@ public class PiedraPapelTijeras {
         
         // Declaración de variables
 
-        String jugador1;
-        String jugador2;
+        String jugador1, jugador2;
 
         // Creamos el objeto "recopilador" y pedimos datos por teclado
  

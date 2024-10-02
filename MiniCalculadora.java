@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class MiniCalculadora {
   public static void main(String[] args) {
 
-    // Creamos el objeto "datos" que nos va recoger los datos por teclado con el constructor Scanner.
-
-    Scanner datos = new Scanner(System.in);
-
     // Declaramos los datos de entrada
 
     String operación;
     float primer_número, segundo_número;
+
+    // Creamos el objeto "datos" que nos va recoger los datos por teclado con el constructor Scanner.
+
+    Scanner datos = new Scanner(System.in);
 
     // Pedimos los datos de entrada por teclado al usuario
 

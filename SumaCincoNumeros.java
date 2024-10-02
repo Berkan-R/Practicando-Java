@@ -3,28 +3,32 @@ import java.util.Scanner;
 public class SumaCincoNumeros {
   public static void main(String[] args) {
 
+    // Declaramos los cinco números de entrada
+
+    int primer_numero, segundo_numero, tercer_numero, cuarto_numero, quinto_numero;
+
     // Creamos un objeto numeros con el constructor "Scanner"
 
     Scanner numeros = new Scanner(System.in);
 
-    // Pedimos todos los numeros por consola y los guardamos en una variable de tipo entero
+    // Pedimos todos los números por consola
 
     System.out.println("Escribe el primero número: ");
-    int primer_numero = numeros.nextInt();
+    primer_numero = numeros.nextInt();
 
     System.out.println("Escribe el segundo número: ");
-    int segundo_numero = numeros.nextInt();
+    segundo_numero = numeros.nextInt();
 
     System.out.println("Escribe el tercer número: ");
-    int tercer_numero = numeros.nextInt();
+    tercer_numero = numeros.nextInt();
 
     System.out.println("Escribe el cuarto número: ");
-    int cuarto_numero = numeros.nextInt();
+    cuarto_numero = numeros.nextInt();
 
     System.out.println("Escribe el quinto número: ");
-    int quinto_numero = numeros.nextInt();
+    quinto_numero = numeros.nextInt();
 
-    // Sumamos los números antes de imprimir por pantalla, porque si no, nos sumará una cadena de Strings y no enteros
+    // Sumamos los números enteros aparte del String porque si no, nos sumará una cadena de Strings y no enteros
 
     System.out.println("El resultado es: " + (primer_numero + segundo_numero + tercer_numero + cuarto_numero + quinto_numero));
     
