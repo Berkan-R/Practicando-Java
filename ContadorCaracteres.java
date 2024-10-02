@@ -7,7 +7,7 @@ public class ContadorCaracteres {
         
         String texto;
 
-        System.out.println("Hola soy tu contador de texto, introduce un texto: ");
+        System.out.println("Hola soy tu contador de caracteres, introduce un texto: ");
         texto = captador.nextLine();
 
         System.out.println("La cantidad de caracteres que tienes: " + texto.replace(" ", "").length());
