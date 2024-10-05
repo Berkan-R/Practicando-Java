@@ -5,15 +5,15 @@ public class SumaCincoNumeros {
 
     // Declaramos los cinco números de entrada
 
-    int primer_numero, segundo_numero, tercer_numero, cuarto_numero, quinto_numero;
+    float primer_numero, segundo_numero, tercer_numero, cuarto_numero, quinto_numero;
 
-    // Creamos un objeto numeros con el constructor "Scanner"
+    // Creamos un objeto numeros con el constructor "Scanner".
 
     Scanner numeros = new Scanner(System.in);
 
-    // Pedimos todos los números por consola
+    // Pedimos todos los números por consola.
 
-    System.out.println("Escribe el primero número: ");
+    System.out.println("Escribe el primer número: ");
     primer_numero = numeros.nextInt();
 
     System.out.println("Escribe el segundo número: ");
@@ -28,10 +28,11 @@ public class SumaCincoNumeros {
     System.out.println("Escribe el quinto número: ");
     quinto_numero = numeros.nextInt();
 
-    // Sumamos los números enteros aparte del String porque si no, nos sumará una cadena de Strings y no enteros
+    // Sumamos todos los números
 
-    System.out.println("El resultado es: " + (primer_numero + segundo_numero + tercer_numero + cuarto_numero + quinto_numero));
-    
+    System.out.println(
+        "El resultado es: " + (primer_numero + segundo_numero + tercer_numero + cuarto_numero + quinto_numero));
+
     numeros.close();
   }
 }

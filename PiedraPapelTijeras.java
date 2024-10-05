@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class PiedraPapelTijeras {
     public static void main(String[] args) {
-        
-        // Declaración de variables
+
+        // Declaración de variables.
 
         String jugador1, jugador2;
 
-        // Creamos el objeto "recopilador" y pedimos datos por teclado
- 
+        // Creamos el objeto "recopilador" y pedimos datos por teclado.
+
         Scanner recopilador = new Scanner(System.in);
 
         System.out.println("Jugador 1 introduce => Piedra, Papel o Tijera: ");
@@ -16,8 +16,8 @@ public class PiedraPapelTijeras {
 
         System.out.println("Posibilidades 2 introduce => Piedra, Papel o Tijera: ");
         jugador2 = recopilador.nextLine();
-        
-        // Creamos las condiciones y mostramos el resultado por pantalla
+
+        // Creamos las condiciones y mostramos el resultado por pantalla.
 
         if (jugador1.equals(jugador2))
             System.out.println("Empate!");
@@ -27,10 +27,10 @@ public class PiedraPapelTijeras {
 
         else if (jugador1.equals("Papel") && jugador2.equals("Piedra"))
             System.out.println("Jugador 1 gana!");
-            
+
         else
             System.out.println("Jugador 2 gana!");
-        
+
         recopilador.close();
     }
 }

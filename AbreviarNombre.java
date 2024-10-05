@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class AbreviarNombre {
     public static void main(String[] args) {
 
-        // La variable de entrada será un String
+        // La variable de entrada será un String.
 
         String nombre;
 
-        // Creamos el objeto teclado por donde se van a introducir los hombres
+        // Creamos el objeto teclado por donde se van a introducir los nombres.
 
         Scanner teclado = new Scanner(System.in);
 
@@ -15,10 +15,10 @@ public class AbreviarNombre {
         nombre = teclado.nextLine();
 
         /*
-            Extraemos el carácter del primer string que está en la posición 0. Depués
-            buscamos el espacio entre los nombres y le sumamos +1 y así extraemos el primer
-            carácter del segundo nombre dentro del mismo String. Finalmente pasamos
-            todo a mayúsculas.
+         * Extraemos el carácter del primer string que está en la posición 0. Depués
+         * buscamos el espacio entre los nombres y le sumamos +1 y así extraemos el
+         * primer carácter del segundo nombre dentro del mismo String. Finalmente,
+         * pasamos todo a mayúsculas.
          */
 
         System.out.println("Tu abreviatura es: "
