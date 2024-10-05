@@ -23,6 +23,7 @@ public class AbreviarNombre {
 
         System.out.println("Tu abreviatura es: "
                 + (nombre.charAt(0) + "." + nombre.charAt(nombre.indexOf(" ") + 1)).toUpperCase());
+
         teclado.close();
     }
 }
