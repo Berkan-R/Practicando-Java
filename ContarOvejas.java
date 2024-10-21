@@ -5,14 +5,14 @@ public class ContarOvejas {
 
         // La entrada será la cantidad de números de ovejas que queremos contar.
 
-        int números;
+        int numeros;
 
         // Creamos el objeto para poder introducir datos por teclado.
 
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Pasame el número de ovejas: ");
-        números = teclado.nextInt();
+        numeros = teclado.nextInt();
 
         /*
          * Creamos dos excepciones, que son: Cundo el número de ovejas es 0 y 1.
@@ -20,15 +20,15 @@ public class ContarOvejas {
          * ovejas, empezando por la primera hasta la última.
          */
 
-        if (números == 0)
+        if (numeros == 0)
             System.out.println("");
 
-        else if (números == 1)
+        else if (numeros == 1)
             System.out.println("1 oveja...");
 
         else
 
-            for (int i = 1; i <= números; i++)
+            for (int i = 1; i <= numeros; i++)
                 System.out.print(i + "ovejas...");
 
         teclado.close();
