@@ -1,9 +1,16 @@
 import java.util.Scanner;
 
 public class ContadorCaracteres {
+
+    // Eliminamos los espacios blancos y comprobamos la longitud del String.
+
+    static String contadorCaracteres(String texto) {
+        return ("La cantidad de caracteres que tienes: " + texto.replace(" ", "").length());
+    }
+
     public static void main(String[] args) {
 
-        // Declraración de variables.
+        // Declraración de variable.
 
         String texto;
 
@@ -14,7 +21,9 @@ public class ContadorCaracteres {
         System.out.println("Hola soy tu contador de caracteres, introduce un texto: ");
         texto = captador.nextLine();
 
-        System.out.println("La cantidad de caracteres que tienes: " + texto.replace(" ", "").length());
+        // Llamamos el método para contar caracteres.
+
+        System.out.println(contadorCaracteres(texto));
 
         captador.close();
     }

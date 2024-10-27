@@ -1,5 +1,13 @@
 public class HolaMundo {
+
+    static String muestraPorPAntalla(String frase) {
+        return frase;
+    }
+
     public static void main(String[] args) {
-        System.out.println("Intenando programar!");
+
+        // Llamamos el método que hemos creado.
+
+        System.out.println(muestraPorPAntalla("Hola Mundo!"));
     }
 }

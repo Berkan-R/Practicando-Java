@@ -1,37 +1,44 @@
 import java.util.Scanner;
 
 public class SumaCincoNumeros {
+
+  static String sumaCincoNumeros(float numero1, float numero2, float numero3, float numero4, float numero5) {
+
+    // Sumamos los cinco números.
+
+    return ("El resultado es: " + (numero1 + numero2 + numero3 + numero4 + numero5));
+  }
+
   public static void main(String[] args) {
 
-    // Declaramos los cinco números de entrada
+    // Declaramos los cinco números de entrada.
 
     float primer_numero, segundo_numero, tercer_numero, cuarto_numero, quinto_numero;
 
-    // Creamos un objeto numeros con el constructor "Scanner".
+    // Creamos un objeto "numeros" con el constructor "Scanner".
 
     Scanner numeros = new Scanner(System.in);
 
-    // Pedimos todos los números por consola.
+    // Pedimos todos los números por terminal.
 
     System.out.println("Escribe el primer número: ");
-    primer_numero = numeros.nextInt();
+    primer_numero = numeros.nextFloat();
 
     System.out.println("Escribe el segundo número: ");
-    segundo_numero = numeros.nextInt();
+    segundo_numero = numeros.nextFloat();
 
     System.out.println("Escribe el tercer número: ");
-    tercer_numero = numeros.nextInt();
+    tercer_numero = numeros.nextFloat();
 
     System.out.println("Escribe el cuarto número: ");
-    cuarto_numero = numeros.nextInt();
+    cuarto_numero = numeros.nextFloat();
 
     System.out.println("Escribe el quinto número: ");
-    quinto_numero = numeros.nextInt();
+    quinto_numero = numeros.nextFloat();
 
-    // Sumamos todos los números
+    // Llamamos el método para sumar los 5 números.
 
-    System.out.println(
-        "El resultado es: " + (primer_numero + segundo_numero + tercer_numero + cuarto_numero + quinto_numero));
+    System.out.println(sumaCincoNumeros(primer_numero, segundo_numero, tercer_numero, cuarto_numero, quinto_numero));
 
     numeros.close();
   }

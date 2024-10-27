@@ -1,31 +1,44 @@
 import java.util.Scanner;
 
 public class DescuentoCompra {
+
+    static String descuentoCompra(float precioPiezas, float numeroPiezas) {
+
+        // Guardamos el descuento directamente en una variable.
+
+        float decuento1 = 25 / 100F;
+        float descuento2 = 50 / 100F;
+
+        // Creamos la condición necesaria para aplicar el descuento.
+
+        if (numeroPiezas <= 3) {
+            return ("Se le aplica un 25% de descuento. Total a pagar: " + (precioPiezas - (precioPiezas * decuento1)));
+        }
+
+        else
+            return ("Se le aplica un 50% de descuento. Total a pagar: " + (precioPiezas - (precioPiezas * descuento2)));
+    }
+
     public static void main(String[] args) {
 
         // Inicializamos todas las variables.
 
-        float precio = 0;
-        float descuentoInicial = 25 / 100F;
-        float descuentoFinal = 50 / 100F;
-        int numPiezas = 0;
+        float precio;
+        float numPiezas;
 
-        // Creamos el objeto teclado para obtener datos por teclado.
+        // Creamos el objeto "teclado" para obtener datos.
 
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Introduce el precio inicial: ");
+        System.out.println("Introduce el precio total de los productos: ");
         precio = teclado.nextFloat();
 
         System.out.println("Introduce cuántas piezas has comprado: ");
         numPiezas = teclado.nextInt();
 
-        // Creamos la condición necesaria para aplicar el descuento.
+        // Llamamos el método para aplicar el descuento.
 
-        if (numPiezas <= 3)
-            System.out.println(precio * descuentoInicial);
-        else
-            System.out.println(precio * descuentoFinal);
+        System.out.println(descuentoCompra(precio, numPiezas));
 
         teclado.close();
     }

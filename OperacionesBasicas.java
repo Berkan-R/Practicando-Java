@@ -1,39 +1,50 @@
 import java.util.Scanner;
 
 public class OperacionesBasicas {
-    public static void main(String[] args) {
 
-        // Inicializamos las variables.
-
-        String operacion = "";
-        int primerNumero = 0;
-        int segundoNumero = 0;
-
-        // Creamos el objeto teclado para introducir datos por teclado.
-
-        Scanner teclado = new Scanner(System.in);
-
-        System.out.println("Escribeme la operación que quieres hacer. Disponibles : +, -, *, /");
-        operacion = teclado.next();
-
-        System.out.println("Pasame el primer número: ");
-        primerNumero = teclado.nextInt();
-
-        System.out.println("Pasame el segundo número: ");
-        segundoNumero = teclado.nextInt();
+    static String calculadora(String operacion, float primerNumero, float segundoNumero) {
 
         // Creamos todas las condiciones para operar.
 
-        if (operacion.equals("+"))
-            System.out.println(primerNumero + " + " + segundoNumero + " = " + (primerNumero + segundoNumero));
-        else if (operacion.equals("-"))
-            System.out.println(primerNumero + " - " + segundoNumero + " = " + (primerNumero - segundoNumero));
-        else if (operacion.equals("*"))
-            System.out.println(primerNumero + " * " + segundoNumero + " = " + (primerNumero * segundoNumero));
-        else if (operacion.equals("/"))
-            System.out.println(primerNumero + " / " + segundoNumero + " = " + (primerNumero / segundoNumero));
-        else
-            System.out.println("Escribe bien la operacion!");
+        switch (operacion) {
+            case "+":
+                return (primerNumero + " + " + segundoNumero + " = " + (primerNumero + segundoNumero));
+            case "-":
+                return (primerNumero + " - " + segundoNumero + " = " + (primerNumero - segundoNumero));
+            case "*":
+                return (primerNumero + " * " + segundoNumero + " = " + (primerNumero * segundoNumero));
+            case "/":
+                return (primerNumero + " / " + segundoNumero + " = " + (primerNumero / segundoNumero));
+
+            default:
+                return ("Operación incorrecta");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // Declaramos las variables.
+
+        String operacion;
+        float primerNumero;
+        float segundoNumero;
+
+        // Creamos el objeto "teclado" para introducir datos.
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Introduce la operación que quieres hacer. Disponibles : +, -, *, /");
+        operacion = teclado.next();
+
+        System.out.println("Introduce el primer número: ");
+        primerNumero = teclado.nextFloat();
+
+        System.out.println("Introduce el segundo número: ");
+        segundoNumero = teclado.nextFloat();
+
+        // Llamamos el método que nos hará las operaciones básicas.
+
+        System.out.println(calculadora(operacion, primerNumero, segundoNumero));
 
         teclado.close();
     }

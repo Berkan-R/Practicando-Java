@@ -1,48 +1,55 @@
 import java.util.Scanner;
 
 public class MiniCalculadora {
+
+    static String calculadora(String operacion, float primerNumero, float segundoNumero) {
+
+        /*
+         * Comparamos las cuatro operaciones posibles con los teclado pasados por
+         * teclado, añadimos una excepción si no coinciden.
+         */
+
+        switch (operacion) {
+
+            case "SUMA":
+                return ("El resultado de la suma es: " + (primerNumero + segundoNumero));
+            case "RESTA":
+                return ("El resultado de la resta es: " + (primerNumero - segundoNumero));
+            case "MULTIPLICACIÓN":
+                return ("El resultado de la multiplicación es: " + (primerNumero * segundoNumero));
+            case "DIVISIÓN":
+                return ("El resultado de la división es: " + (primerNumero / segundoNumero));
+            default:
+                return ("Operación incorrecta");
+        }
+    }
+
     public static void main(String[] args) {
 
-        // Declaramos los datos de entrada.
+        // Declaramos las variables de entrada.
 
         String operacion;
         float primer_numero, segundo_numero;
 
-        // Creamos el objeto "datos" que nos va recoger los datos por teclado.
+        // Creamos el objeto "teclado" que nos va recoger los teclado.
 
-        Scanner datos = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
-        // Pedimos los datos de entrada por teclado al usuario.
+        // Pedimos los teclado de entrada por teclado al usuario.
 
         System.out.println("Escribe el primer número: ");
-        primer_numero = datos.nextFloat();
+        primer_numero = teclado.nextFloat();
 
         System.out.println("Escribe el segundo número: ");
-        segundo_numero = datos.nextFloat();
+        segundo_numero = teclado.nextFloat();
 
         System.out.println("Elige alguna de estas tres opreraciones: SUMA, RESTA, MULTIPLICACIÓN o DIVISIÓN: ");
-        operacion = datos.next();
+        operacion = teclado.next();
 
-        /*
-         * Comparamos las cuatro operaciones posibles con los datos pasados por teclado,
-         * añadimos una excepción si no coinciden.
-         */
+        // Llamamos el método.
 
-        if (operacion.equals("SUMA"))
-            System.out.println("El resultado de la suma es: " + (primer_numero + segundo_numero));
+        System.out.println(calculadora(operacion, primer_numero, segundo_numero));
 
-        else if (operacion.equals("RESTA"))
-            System.out.println("El resultado de la resta es: " + (primer_numero - segundo_numero));
-
-        else if (operacion.equals("MULTIPLICACIÓN"))
-            System.out.println("El resultado de la multiplicación es: " + (primer_numero * segundo_numero));
-
-        else if (operacion.equals("DIVISIÓN"))
-            System.out.println("El resultado de la división es: " + (primer_numero / segundo_numero));
-
-        else
-            System.out.println("Escribe bien la operacion en la consola!!!");
-
-        datos.close();
+        teclado.close();
     }
 }
